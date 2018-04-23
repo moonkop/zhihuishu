@@ -3,23 +3,26 @@
   "description": "哈哈哈哈哈",
   "version": "4.0",
   "permissions": [
-    "tabs", "http://*/*", "https://*/*"
+    "tabs",
+    "http://*/*",
+    "https://*/*"
   ],
   "browser_action": {
-      "default_title": "来打我来打我",
-      "default_icon": "timg.png",
-      "default_popup": "popup.html"
+    "default_title": "来打我来打我",
+    "default_icon": "timg.png",
+    "default_popup": "popup.html"
   },
   "manifest_version": 2,
   "content_scripts": [
     {
-			"matches": [
-				"http://study.zhihuishu.com/learning/videoList*"
-			],
-			"js": [
-				"code.js"
-			],
-			"run_at": "document_end"
-		}
+      "matches": [
+        "http://study.zhihuishu.com/learning/videoList*"
+      ],
+      "js": [
+        "jquery.min.js",
+        "code.js"
+      ],
+      "run_at": "document_end"
+    }
   ]
 }

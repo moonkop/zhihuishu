@@ -71,7 +71,13 @@ function detectEnd()
 }
 
 function nextLesson()
-{
+{ 
+    var half=$(".time_ico_half")
+    if(half!=null)
+    {
+        half.click();
+        return ;
+    }
     document.getElementsByClassName("next_lesson_bg tm_next_lesson")[0].click();
     console.log(strNow + "A New Lesson Is Started");
 }
@@ -82,6 +88,10 @@ function detectOverWatch()
     {
         var strraw =document.getElementsByClassName("progressbar_box_tip")[0].innerText
         if (strraw==null)
+        {
+            return ;
+        }
+        if(strraw.split("『")[1]==null)
         {
             return ;
         }

@@ -78,7 +78,18 @@ function nextLesson()
         half.click();
         return ;
     }
-    document.getElementsByClassName("next_lesson_bg tm_next_lesson")[0].click();
+    var nextbutton=document.getElementsByClassName("next_lesson_bg tm_next_lesson")[0];
+    if(nextbutton!=null)
+    {
+        nextbutton.click();
+        return ;
+    }
+    setTimeout(() => {
+        window.location.href="";
+        
+    }, 5*60*1000);
+
+    
     console.log(strNow + "A New Lesson Is Started");
 }
 function detectOverWatch()

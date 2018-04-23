@@ -42,7 +42,7 @@ function FibDlg()
     if(yes!=null)
     {
         yes.click();
-        console.log(strNow + "A warning Was Closed");
+        console.warn(strNow + "A warning Was Closed");
         
     }
 }
@@ -73,7 +73,7 @@ function detectEnd()
 function nextLesson()
 { 
     var half=$(".time_ico_half")
-    if(half!=null)
+    if(half.length!=0)
     {
         half.click();
         return ;
@@ -86,7 +86,7 @@ function nextLesson()
     }
     setTimeout(() => {
         window.location.href="";
-        
+
     }, 5*60*1000);
 
     

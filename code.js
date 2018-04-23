@@ -111,6 +111,7 @@ function detectOverWatch()
 }
 function getMaxSpeed()
 {
+    return;
     var str = document.getElementsByClassName("speedBox")[0].style.backgroundImage;
     var substr1 = str.substr(str.length - 9, 3);
     if (substr1 != "1.5")
